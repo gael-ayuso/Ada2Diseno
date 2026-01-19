@@ -1,6 +1,6 @@
 
 public class Asignatura {
-    private String nombreAsignatura;
+    private final String nombreAsignatura;
     private Integer calificacion;
 
 
@@ -26,6 +26,6 @@ public class Asignatura {
 
     @Override
     public String toString() {
-        return nombreAsignatura + " - " + (calificacion != null ? calificacion : "Sin calificación");
+        return nombreAsignatura + " - " + (calificacion != null ? calificacion : "Sin calificación" + "\n");
     }
 }
