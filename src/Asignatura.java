@@ -1,6 +1,8 @@
+
 public class Asignatura {
     private String nombreAsignatura;
     private Integer calificacion;
+
 
     public Asignatura(String nombreAsignatura) {
         this.nombreAsignatura = nombreAsignatura;

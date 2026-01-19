@@ -50,5 +50,8 @@ public class Main {
         for(Alumno alumno : alumnos) {
             System.out.println(alumno);
         }
+
+        CsvReader.writeToFile("Calificaciones.csv", alumnos);
+
     }
 }
