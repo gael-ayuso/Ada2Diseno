@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Alumno {
-    private String nombre;
-    private String primer_Apellido;
-    private String segundo_Apellido;
-    private int matricula;
+    private final String nombre;
+    private final String primer_Apellido;
+    private final String segundo_Apellido;
+    private final int matricula;
     private int calificacion;
     //private List<Asignatura> asignaturas;
 
