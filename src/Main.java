@@ -8,10 +8,10 @@ public class Main {
         List<Alumno> alumnos = CsvReader.read(filepath); // <==== Aca se agrega la direccion del archivo de la lista
         for (Alumno alumno : alumnos) {
             System.out.println(alumno);
-            String materia;
+            System.out.println("Si desea dejar de agregar materias escriba \"continuar\"");
             while (true) {
                 System.out.print("Ingrese la materia: ");
-                materia = scanner.nextLine().trim();
+                String materia = scanner.nextLine().trim();
                 if (materia.equalsIgnoreCase("continuar")) {
                     break;
                 }
