@@ -25,10 +25,6 @@ public class Alumno {
 //        return asignaturas;
 //    }
 
-    public String getNombre() {
-        return nombre + " " + primer_Apellido + " " + segundo_Apellido;
-    }
-
     public int getMatricula() {
         return matricula;
     }
