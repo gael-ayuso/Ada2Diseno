@@ -17,13 +17,6 @@ public class Alumno {
         //this.asignaturas = new ArrayList<>();
     }
 
-//    public void addAsignatura(Asignatura asignatura) {
-//        //this.asignaturas.add(asignatura);
-//    }
-
-//    public List<Asignatura> getAsignaturas() {
-//        return asignaturas;
-//    }
 
     public int getMatricula() {
         return matricula;

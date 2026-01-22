@@ -29,23 +29,8 @@ public class CsvReader {
             FileWriter fileWriter;
             fileWriter = new FileWriter(fileName);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-//            for (Alumno alumno : alumnos) {
-//                if (alumno.getAsignaturas() != null) {
-//                    maxAsignaturas = Math.max(maxAsignaturas, alumno.getAsignaturas().size());
-//                }
-//            }
+
             for (Alumno alumno : alumnos) {
-//                int asignaturasActuales = 0;
-//                if (alumno.getAsignaturas() != null) {
-//                    for (Asignatura asignatura : alumno.getAsignaturas()) {
-//                        bufferedWriter.write(asignatura.getNombreAsignatura() + "," + asignatura.getCalificacion() + ",");
-//                        asignaturasActuales++;
-//                    }
-//                    for (int i = asignaturasActuales; i < maxAsignaturas; i++) {
-//                        bufferedWriter.write(",,"); // Rellenar las columnas vacias de los otros que no tienen tantas materias
-//                    }
-//                    bufferedWriter.newLine();
-//                }
                 bufferedWriter.write(alumno.getMatricula() + "," + "Diseño de Software" + "," + alumno.getCalificacion() + ",");
                 bufferedWriter.newLine();
             }
