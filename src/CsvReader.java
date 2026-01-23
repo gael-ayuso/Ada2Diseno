@@ -25,7 +25,6 @@ public class CsvReader {
 
     public static void writeToFile(String fileName, List<Alumno> alumnos) {
         try {
-            int maxAsignaturas = 0;
             FileWriter fileWriter;
             fileWriter = new FileWriter(fileName);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);

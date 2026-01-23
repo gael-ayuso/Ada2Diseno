@@ -19,6 +19,12 @@ public class Usuario {
     public String getUsuario() {
         return usuario;
     }
+    public String getContrasena() {
+        return contrasena;
+    }
 
-
+    @Override
+    public String toString() {
+        return usuario + "," + contrasena;
+    }
 }
