@@ -20,6 +20,7 @@ public class UsersReader {
         String line;
         ArrayList<Usuario> users = new ArrayList<>();
         try(Scanner scanner = new Scanner(new File(filepath))) {
+            scanner.nextLine();
             while (scanner.hasNextLine()) {
                 line = scanner.nextLine();
                 String[] split = line.split(",");
@@ -39,10 +40,8 @@ public class UsersReader {
             FileWriter fileWriter;
             fileWriter = new FileWriter(fileName, true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            if(scanner.hasNextLine()) {
-                bufferedWriter.newLine();
-            }else{
-                bufferedWriter.write("Usuarios,Contrasena,");
+            if(!scanner.hasNextLine()) {
+                bufferedWriter.write("Usuarios,Contrasenas,");
                 bufferedWriter.newLine();
             }
             scanner.close();
@@ -64,22 +63,6 @@ public class UsersReader {
     }
 
     public static void main(String[] args) {
-
-//        try{
-//            UsersReader usersReader = new UsersReader("Usuarios.csv");
-//            ArrayList<Usuario> users = usersReader.getUsers();
-//            for (Usuario usuario : users) {
-//                if(usuario.login("Juan", "12345")) {
-//                    System.out.println(usuario);
-//                }else {
-//                    System.out.println("No se encuentra el usuario o la contrasenia es incorrecta");
-//                }
-//            }
-//
-//        } catch (Exception e) {
-//            throw new RuntimeException(e);
-//        }
-
         try {
             Scanner scanner = new Scanner(System.in);
             UsersReader usersReader = new UsersReader();

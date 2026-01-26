@@ -33,7 +33,11 @@ public class ReportePDF {
             for (Alumno alumno : alumnos) {
                 table.addCell(String.valueOf(alumno.getMatricula()));
                 table.addCell(extraerNombre(alumno.toString()));
-                table.addCell(String.valueOf(alumno.getCalificacion()));
+                if(alumno.getCalificacion() == -1){
+                    table.addCell("S/C");
+                }else{
+                    table.addCell(String.valueOf(alumno.getCalificacion()));
+                }
             }
 
             document.add(table);
