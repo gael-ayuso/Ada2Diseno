@@ -37,6 +37,9 @@ public class Main {
                         }
 
                         CsvReader.writeToFile("Calificaciones.csv", alumnos);
+
+                        ReportePDF.generarReporte("ReporteCalificaciones.pdf", alumnos);
+
                         break;
                     }else{
                         System.out.println("Usuario o contrasena invalidas");
