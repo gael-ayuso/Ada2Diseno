@@ -1,3 +1,5 @@
+package disenio.ada2;
+
 import javax.swing.*;
 
 public class MenuPrincipal extends JFrame {
