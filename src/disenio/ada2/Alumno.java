@@ -35,4 +35,18 @@ public class Alumno {
                 nombre + " " + primer_Apellido + " " + segundo_Apellido +
                 ", calificación= " + calificacion;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getPrimer_Apellido() {
+        return primer_Apellido;
+    }
+
+    public String getSegundo_Apellido() {
+        return segundo_Apellido;
+    }
+    
+    
 }

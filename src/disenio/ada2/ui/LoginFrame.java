@@ -1,4 +1,8 @@
-package disenio.ada2;
+package disenio.ada2.ui;
+
+import disenio.ada2.Encriptador;
+import disenio.ada2.UsersReader;
+import disenio.ada2.Usuario;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,26 +16,28 @@ public class LoginFrame extends JFrame {
     private JPasswordField txtPassword;
 
     public LoginFrame() {
+
         setTitle("Login - Sistema de Calificaciones");
         setSize(350, 200);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLayout(new GridLayout(3, 2, 10, 10));
+        JPanel panel = new JPanel(new GridLayout(3, 2, 5, 10));
+        panel.setBorder(BorderFactory.createEmptyBorder(10, 5, 10, 10));
 
-        add(new JLabel("Usuario:"));
+        panel.add(new JLabel("Usuario:"));
         txtUsuario = new JTextField();
-        add(txtUsuario);
+        panel.add(txtUsuario);
 
-        add(new JLabel("Contraseña:"));
+        panel.add(new JLabel("Contraseña:"));
         txtPassword = new JPasswordField();
-        add(txtPassword);
+        panel.add(txtPassword);
 
         JButton btnLogin = new JButton("Iniciar sesión");
-        add(new JLabel()); // espacio vacío
-        add(btnLogin);
+        panel.add(new JLabel()); // espacio vacío
+        panel.add(btnLogin);
 
         btnLogin.addActionListener(e -> autenticar());
-
+        add(panel);
         setVisible(true);
     }
 

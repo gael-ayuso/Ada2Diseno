@@ -1,5 +1,6 @@
+package disenio.ada2;
 
-import disenio.ada2.LoginFrame;
+import disenio.ada2.ui.LoginFrame;
 
 public class Main {
     public static void main(String[] args) {

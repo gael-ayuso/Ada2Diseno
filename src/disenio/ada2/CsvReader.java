@@ -42,5 +42,28 @@ public class CsvReader {
         }
     }
 
+    public static void agregarAlumnoArchivo(String filePath, Alumno alumno) {
+        try {
+            File file = new File(filePath);
+            boolean escribirHeader = !file.exists() || file.length() == 0;
+
+            try (FileWriter fw = new FileWriter(file, true);
+                 BufferedWriter bw = new BufferedWriter(fw)) {
+
+                if (escribirHeader) {
+                    bw.write("Matricula,Primer apellido,Segundo apellido,Nombres");
+                    bw.newLine();
+                }
+                bw.write(alumno.getMatricula() + ","
+                        + alumno.getPrimer_Apellido() + ","
+                        + alumno.getSegundo_Apellido() + ","
+                        + alumno.getNombre());
+                bw.newLine();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
 }
